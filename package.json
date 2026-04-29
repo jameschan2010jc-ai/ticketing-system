@@ -1,0 +1,28 @@
+{
+  "name": "ticketing-ui-backend-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace @apps/web run dev",
+    "dev:web:lan": "npm --workspace @apps/web run dev:lan",
+    "build:web": "npm --workspace @apps/web run build",
+    "preview:web": "npm --workspace @apps/web run preview",
+    "preview:web:lan": "npm --workspace @apps/web run preview:lan",
+    "test:web": "npm --workspace @apps/web run test",
+    "dev:admin": "npm --workspace @apps/admin run dev",
+    "dev:admin:lan": "npm --workspace @apps/admin run dev:lan",
+    "build:admin": "npm --workspace @apps/admin run build",
+    "preview:admin": "npm --workspace @apps/admin run preview",
+    "preview:admin:lan": "npm --workspace @apps/admin run preview:lan",
+    "test:admin": "npm --workspace @apps/admin run test",
+    "dev:api": "npm --workspace @apps/api run dev",
+    "build:api": "npm --workspace @apps/api run build",
+    "start:api": "npm --workspace @apps/api run start",
+    "test:api": "npm --workspace @apps/api run test",
+    "dev": "npm run dev:web"
+  }
+}

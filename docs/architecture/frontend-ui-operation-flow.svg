@@ -1,0 +1,384 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1320" viewBox="0 0 1800 1320" role="img" aria-labelledby="title desc">
+  <title id="title">Frontend UI Operation Flow</title>
+  <desc id="desc">Customer frontend page switch diagram for p1 through p64, including purchase, verification, authentication, registration, profile, order, and ticket flows.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#334155" />
+    </marker>
+    <marker id="arrow-soft" markerWidth="10" markerHeight="10" refX="8.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#64748b" />
+    </marker>
+    <style>
+      .bg { fill: #f8fafc; }
+      .lane { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; rx: 16; }
+      .lane-title { font: 700 18px Arial, sans-serif; fill: #0f172a; }
+      .node .thumb-border { fill: none; stroke: #334155; stroke-width: 1.5; rx: 10; }
+      .node .thumb-label-strip { fill: #ffffff; opacity: 0.86; stroke: none; rx: 8; }
+      .node image { opacity: 0.92; }
+      .node text { font: 600 14px Arial, sans-serif; fill: #0f172a; text-anchor: middle; }
+      .node .route { font: 500 12px Arial, sans-serif; fill: #475569; }
+      .purchase rect { fill: #e0f2fe; }
+      .verify rect { fill: #fef3c7; }
+      .auth rect { fill: #dcfce7; }
+      .profile rect { fill: #ede9fe; }
+      .modal rect { fill: #f1f5f9; stroke-dasharray: 6 4; }
+      .edge { fill: none; stroke: #334155; stroke-width: 2.2; marker-end: url(#arrow); }
+      .edge-soft { fill: none; stroke: #64748b; stroke-width: 1.8; stroke-dasharray: 7 5; marker-end: url(#arrow-soft); }
+      .label-bg { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1; rx: 6; }
+      .label { font: 600 12px Arial, sans-serif; fill: #334155; text-anchor: middle; }
+      .note { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .legend-title { font: 700 14px Arial, sans-serif; fill: #0f172a; }
+      .legend-text { font: 500 12px Arial, sans-serif; fill: #475569; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1800" height="1320" />
+  <text x="40" y="46" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">Frontend UI Operation Flow</text>
+  <text x="40" y="72" class="note">Solid arrows are primary button/page switches. Dashed arrows are back/edit, tab, modal, or global navigation shortcuts.</text>
+
+  <rect class="lane" x="40" y="95" width="1720" height="555" />
+  <text class="lane-title" x="64" y="126">Purchase, Auth, Registration, and Verification</text>
+
+  <rect class="lane" x="40" y="680" width="1720" height="565" />
+  <text class="lane-title" x="64" y="712">Profile, Orders, Tickets, and Global Bottom Navigation</text>
+
+  <g class="node purchase" id="p001">
+    <image href="../input/ui-images/p1.jpg" x="80" y="155" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="84" y="172" width="212" height="44" />
+    <rect class="thumb-border" x="80" y="155" width="220" height="72" />
+    <text x="190" y="184">p1 Home</text>
+    <text class="route" x="190" y="207">/</text>
+  </g>
+
+  <g class="node purchase" id="p002">
+    <image href="../input/ui-images/p2.jpg" x="370" y="155" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="374" y="172" width="212" height="44" />
+    <rect class="thumb-border" x="370" y="155" width="220" height="72" />
+    <text x="480" y="184">p2 Purchase Method</text>
+    <text class="route" x="480" y="207">/purchase-method</text>
+  </g>
+
+  <g class="node purchase" id="p003">
+    <image href="../input/ui-images/p3.jpg" x="660" y="155" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="664" y="172" width="212" height="44" />
+    <rect class="thumb-border" x="660" y="155" width="220" height="72" />
+    <text x="770" y="184">p3 Guest Notice</text>
+    <text class="route" x="770" y="207">/purchase-method/guest-notice</text>
+  </g>
+
+  <g class="node purchase" id="p010">
+    <image href="../input/ui-images/p10.jpg" x="950" y="155" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="954" y="172" width="212" height="44" />
+    <rect class="thumb-border" x="950" y="155" width="220" height="72" />
+    <text x="1060" y="184">p10 Purchase Content</text>
+    <text class="route" x="1060" y="207">/purchase-content</text>
+  </g>
+
+  <g class="node purchase" id="p011">
+    <image href="../input/ui-images/p11.jpg" x="1240" y="155" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="1244" y="172" width="212" height="44" />
+    <rect class="thumb-border" x="1240" y="155" width="220" height="72" />
+    <text x="1350" y="184">p11 Order Confirmation</text>
+    <text class="route" x="1350" y="207">/order-confirmation</text>
+  </g>
+
+  <g class="node purchase" id="p012">
+    <image href="../input/ui-images/p12.jpg" x="1530" y="155" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="1534" y="172" width="212" height="44" />
+    <rect class="thumb-border" x="1530" y="155" width="220" height="72" />
+    <text x="1640" y="184">p12 Payment Method</text>
+    <text class="route" x="1640" y="207">/payment-method</text>
+  </g>
+
+  <g class="node purchase" id="p013">
+    <image href="../input/ui-images/p13.jpg" x="1530" y="305" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="1534" y="322" width="212" height="44" />
+    <rect class="thumb-border" x="1530" y="305" width="220" height="72" />
+    <text x="1640" y="334">p13 Payment Success</text>
+    <text class="route" x="1640" y="357">/payment-success</text>
+  </g>
+
+  <g class="node auth" id="p030">
+    <image href="../input/ui-images/p30.jpg" x="370" y="330" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="374" y="347" width="212" height="44" />
+    <rect class="thumb-border" x="370" y="330" width="220" height="72" />
+    <text x="480" y="359">p30 Existing Login</text>
+    <text class="route" x="480" y="382">/login-existing-account</text>
+  </g>
+
+  <g class="node auth" id="p031">
+    <image href="../input/ui-images/p31.jpg" x="80" y="330" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="84" y="347" width="212" height="44" />
+    <rect class="thumb-border" x="80" y="330" width="220" height="72" />
+    <text x="190" y="359">p31 Forget Password</text>
+    <text class="route" x="190" y="382">/forget-password</text>
+  </g>
+
+  <g class="node auth" id="p032">
+    <image href="../input/ui-images/p32.jpg" x="660" y="330" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="664" y="347" width="212" height="44" />
+    <rect class="thumb-border" x="660" y="330" width="220" height="72" />
+    <text x="770" y="359">p32 Auth Success</text>
+    <text class="route" x="770" y="382">/auth-success</text>
+  </g>
+
+  <g class="node auth" id="p040">
+    <image href="../input/ui-images/p40.jpg" x="370" y="515" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="374" y="532" width="212" height="44" />
+    <rect class="thumb-border" x="370" y="515" width="220" height="72" />
+    <text x="480" y="544">p40 Register Method</text>
+    <text class="route" x="480" y="567">/register-method</text>
+  </g>
+
+  <g class="node auth" id="p041">
+    <image href="../input/ui-images/p41.jpg" x="660" y="475" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="664" y="492" width="212" height="44" />
+    <rect class="thumb-border" x="660" y="475" width="220" height="72" />
+    <text x="770" y="504">p41 Phone Register</text>
+    <text class="route" x="770" y="527">/register-phone</text>
+  </g>
+
+  <g class="node auth" id="p042">
+    <image href="../input/ui-images/p42.jpg" x="660" y="575" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="664" y="592" width="212" height="44" />
+    <rect class="thumb-border" x="660" y="575" width="220" height="72" />
+    <text x="770" y="604">p42 Email Register</text>
+    <text class="route" x="770" y="627">/register-email</text>
+  </g>
+
+  <g class="node verify" id="p050">
+    <image href="../input/ui-images/p50.jpg" x="950" y="330" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="954" y="347" width="212" height="44" />
+    <rect class="thumb-border" x="950" y="330" width="220" height="72" />
+    <text x="1060" y="359">p50 Verify Order</text>
+    <text class="route" x="1060" y="382">/verification-required-order</text>
+  </g>
+
+  <g class="node verify" id="p051">
+    <image href="../input/ui-images/p51.jpg" x="1240" y="330" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="1244" y="347" width="212" height="44" />
+    <rect class="thumb-border" x="1240" y="330" width="220" height="72" />
+    <text x="1350" y="359">p51 ID Upload</text>
+    <text class="route" x="1350" y="382">/ticket-verification-upload</text>
+  </g>
+
+  <g class="node verify" id="p052">
+    <image href="../input/ui-images/p52.jpg" x="1530" y="465" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="1534" y="482" width="212" height="44" />
+    <rect class="thumb-border" x="1530" y="465" width="220" height="72" />
+    <text x="1640" y="494">p52 Verify Success</text>
+    <text class="route" x="1640" y="517">/ticket-verification-success</text>
+  </g>
+
+  <g class="node verify" id="p053">
+    <image href="../input/ui-images/p53.jpg" x="1240" y="535" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="1244" y="552" width="212" height="44" />
+    <rect class="thumb-border" x="1240" y="535" width="220" height="72" />
+    <text x="1350" y="564">p53 Verify Failed</text>
+    <text class="route" x="1350" y="587">/ticket-verification-failed</text>
+  </g>
+
+  <g class="node profile" id="any-page">
+    <rect x="80" y="760" width="220" height="72" />
+    <text x="190" y="789">Any page</text>
+    <text class="route" x="190" y="812">bottom nav available</text>
+  </g>
+
+  <g class="node profile" id="p060">
+    <image href="../input/ui-images/p60.jpg" x="370" y="725" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="374" y="742" width="212" height="44" />
+    <rect class="thumb-border" x="370" y="725" width="220" height="72" />
+    <text x="480" y="754">p60 Profile Guest</text>
+    <text class="route" x="480" y="777">/profile-guest</text>
+  </g>
+
+  <g class="node profile" id="p061">
+    <image href="../input/ui-images/p61.jpg" x="370" y="900" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="374" y="917" width="212" height="44" />
+    <rect class="thumb-border" x="370" y="900" width="220" height="72" />
+    <text x="480" y="929">p61 Profile Center</text>
+    <text class="route" x="480" y="952">/profile-center</text>
+  </g>
+
+  <g class="node profile" id="p062">
+    <image href="../input/ui-images/p62.jpg" x="660" y="805" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="664" y="822" width="212" height="44" />
+    <rect class="thumb-border" x="660" y="805" width="220" height="72" />
+    <text x="770" y="834">p62 My Orders</text>
+    <text class="route" x="770" y="857">/my-orders</text>
+  </g>
+
+  <g class="node profile" id="p063">
+    <image href="../input/ui-images/p63.jpg" x="660" y="955" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="664" y="972" width="212" height="44" />
+    <rect class="thumb-border" x="660" y="955" width="220" height="72" />
+    <text x="770" y="984">p63 Tickets Unused</text>
+    <text class="route" x="770" y="1007">/my-tickets</text>
+  </g>
+
+  <g class="node profile" id="p064">
+    <image href="../input/ui-images/p64.jpg" x="950" y="955" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="954" y="972" width="212" height="44" />
+    <rect class="thumb-border" x="950" y="955" width="220" height="72" />
+    <text x="1060" y="984">p64 Tickets History</text>
+    <text class="route" x="1060" y="1007">/my-tickets history tab</text>
+  </g>
+
+  <g class="node profile" id="p033">
+    <image href="../input/ui-images/p33.jpg" x="660" y="1100" width="220" height="72" preserveAspectRatio="xMidYMid slice" />
+    <rect class="thumb-label-strip" x="664" y="1117" width="212" height="44" />
+    <rect class="thumb-border" x="660" y="1100" width="220" height="72" />
+    <text x="770" y="1129">p33 Change Password</text>
+    <text class="route" x="770" y="1152">/change-password</text>
+  </g>
+
+  <g class="node modal" id="qr-modal">
+    <rect x="950" y="1100" width="220" height="72" />
+    <text x="1060" y="1129">QR Code Panel</text>
+    <text class="route" x="1060" y="1152">modal, not page</text>
+  </g>
+
+  <!-- Primary purchase flow -->
+  <path class="edge" d="M300 191 L370 191" />
+  <rect class="label-bg" x="303" y="164" width="64" height="22" /><text class="label" x="335" y="180">Start</text>
+
+  <path class="edge" d="M590 191 L660 191" />
+  <rect class="label-bg" x="599" y="164" width="52" height="22" /><text class="label" x="625" y="180">Guest</text>
+
+  <path class="edge" d="M880 191 L950 191" />
+  <rect class="label-bg" x="888" y="164" width="54" height="22" /><text class="label" x="915" y="180">Continue</text>
+
+  <path class="edge" d="M1170 191 L1240 191" />
+  <rect class="label-bg" x="1176" y="150" width="58" height="22" /><text class="label" x="1205" y="166">No verify</text>
+
+  <path class="edge" d="M1460 191 L1530 191" />
+  <rect class="label-bg" x="1468" y="164" width="54" height="22" /><text class="label" x="1495" y="180">Pay</text>
+
+  <path class="edge" d="M1640 227 L1640 305" />
+  <rect class="label-bg" x="1584" y="255" width="112" height="22" /><text class="label" x="1640" y="271">Select method</text>
+
+  <!-- Verification branch -->
+  <path class="edge" d="M1060 227 L1060 330" />
+  <rect class="label-bg" x="1070" y="267" width="104" height="22" /><text class="label" x="1122" y="283">Verify required</text>
+
+  <path class="edge" d="M1170 366 L1240 366" />
+  <rect class="label-bg" x="1168" y="338" width="74" height="22" /><text class="label" x="1205" y="354">Start verify</text>
+
+  <path class="edge" d="M1460 366 L1500 366 L1500 501 L1530 501" />
+  <rect class="label-bg" x="1472" y="425" width="52" height="22" /><text class="label" x="1498" y="441">Pass</text>
+
+  <path class="edge" d="M1350 402 L1350 535" />
+  <rect class="label-bg" x="1362" y="458" width="46" height="22" /><text class="label" x="1385" y="474">Fail</text>
+
+  <path class="edge" d="M1460 571 L1490 571 L1490 366 L1460 366" />
+  <rect class="label-bg" x="1499" y="463" width="64" height="22" /><text class="label" x="1531" y="479">Re-upload</text>
+
+  <path class="edge" d="M1640 465 L1640 227" />
+  <rect class="label-bg" x="1650" y="335" width="110" height="22" /><text class="label" x="1705" y="351">Continue pay</text>
+
+  <!-- Auth and registration flow -->
+  <path class="edge" d="M480 227 L480 330" />
+  <rect class="label-bg" x="492" y="267" width="52" height="22" /><text class="label" x="518" y="283">Login</text>
+
+  <path class="edge" d="M590 366 L660 366" />
+  <rect class="label-bg" x="596" y="338" width="58" height="22" /><text class="label" x="625" y="354">Success</text>
+
+  <path class="edge" d="M370 366 L300 366" />
+  <rect class="label-bg" x="310" y="338" width="52" height="22" /><text class="label" x="336" y="354">Forgot</text>
+
+  <path class="edge" d="M300 390 L370 390" />
+  <rect class="label-bg" x="310" y="398" width="56" height="22" /><text class="label" x="338" y="414">Reset OK</text>
+
+  <path class="edge" d="M520 227 L520 515" />
+  <rect class="label-bg" x="532" y="429" width="70" height="22" /><text class="label" x="567" y="445">Register</text>
+
+  <path class="edge" d="M590 551 L660 511" />
+  <rect class="label-bg" x="600" y="511" width="50" height="22" /><text class="label" x="625" y="527">Phone</text>
+
+  <path class="edge" d="M590 551 L660 611" />
+  <rect class="label-bg" x="600" y="582" width="42" height="22" /><text class="label" x="621" y="598">Email</text>
+
+  <path class="edge" d="M770 475 L770 402" />
+  <rect class="label-bg" x="781" y="426" width="58" height="22" /><text class="label" x="810" y="442">Success</text>
+
+  <path class="edge" d="M735 575 L735 402" />
+  <rect class="label-bg" x="668" y="426" width="58" height="22" /><text class="label" x="697" y="442">Success</text>
+
+  <path class="edge" d="M880 366 L915 366 L915 191 L950 191" />
+  <rect class="label-bg" x="885" y="267" width="62" height="22" /><text class="label" x="916" y="283">Continue</text>
+
+  <!-- Profile and global nav -->
+  <path class="edge-soft" d="M190 760 L190 227" />
+  <rect class="label-bg" x="77" y="485" width="106" height="22" /><text class="label" x="130" y="501">Bottom Home</text>
+
+  <path class="edge-soft" d="M300 796 L370 761" />
+  <rect class="label-bg" x="304" y="747" width="72" height="22" /><text class="label" x="340" y="763">Logged out</text>
+
+  <path class="edge-soft" d="M300 796 L370 936" />
+  <rect class="label-bg" x="304" y="872" width="62" height="22" /><text class="label" x="335" y="888">Logged in</text>
+
+  <path class="edge" d="M480 725 L480 402" />
+  <rect class="label-bg" x="492" y="630" width="44" height="22" /><text class="label" x="514" y="646">Login</text>
+
+  <path class="edge" d="M520 725 L520 587" />
+  <rect class="label-bg" x="532" y="644" width="60" height="22" /><text class="label" x="562" y="660">Register</text>
+
+  <path class="edge" d="M590 936 L660 841" />
+  <rect class="label-bg" x="604" y="854" width="74" height="22" /><text class="label" x="641" y="870">My orders</text>
+
+  <path class="edge" d="M590 936 L660 991" />
+  <rect class="label-bg" x="604" y="970" width="72" height="22" /><text class="label" x="640" y="986">My tickets</text>
+
+  <path class="edge" d="M570 972 L704 1100" />
+  <rect class="label-bg" x="572" y="1032" width="116" height="22" /><text class="label" x="630" y="1048">Change password</text>
+
+  <path class="edge-soft" d="M480 900 L480 835 L230 835 L230 227" />
+  <rect class="label-bg" x="493" y="844" width="54" height="22" /><text class="label" x="520" y="860">Logout</text>
+
+  <path class="edge" d="M770 1100 L590 936" />
+  <rect class="label-bg" x="675" y="1008" width="92" height="22" /><text class="label" x="721" y="1024">Password OK</text>
+
+  <path class="edge-soft" d="M660 841 L590 936" />
+  <rect class="label-bg" x="607" y="898" width="42" height="22" /><text class="label" x="628" y="914">Back</text>
+
+  <path class="edge" d="M880 991 L950 991" />
+  <rect class="label-bg" x="894" y="963" width="44" height="22" /><text class="label" x="916" y="979">History</text>
+
+  <path class="edge" d="M950 1015 L880 1015" />
+  <rect class="label-bg" x="894" y="1023" width="44" height="22" /><text class="label" x="916" y="1039">Unused</text>
+
+  <path class="edge-soft" d="M880 1018 L950 1136" />
+  <rect class="label-bg" x="895" y="1074" width="54" height="22" /><text class="label" x="922" y="1090">View QR</text>
+
+  <!-- Selected header back/edit links -->
+  <path class="edge-soft" d="M395 155 L300 155" />
+  <rect class="label-bg" x="326" y="128" width="40" height="22" /><text class="label" x="346" y="144">Back</text>
+
+  <path class="edge-soft" d="M685 155 L590 155" />
+  <rect class="label-bg" x="616" y="128" width="40" height="22" /><text class="label" x="636" y="144">Back</text>
+
+  <path class="edge-soft" d="M1240 215 L1170 215" />
+  <rect class="label-bg" x="1184" y="223" width="62" height="22" /><text class="label" x="1215" y="239">Back/edit</text>
+
+  <path class="edge-soft" d="M950 390 L880 390 L880 227 L950 227" />
+  <rect class="label-bg" x="884" y="404" width="62" height="22" /><text class="label" x="915" y="420">Back/edit</text>
+
+  <path class="edge-soft" d="M370 390 L300 390" />
+  <rect class="label-bg" x="310" y="410" width="40" height="22" /><text class="label" x="330" y="426">Back</text>
+
+  <path class="edge-soft" d="M370 551 L300 551 L300 227 L370 227" />
+  <rect class="label-bg" x="308" y="521" width="40" height="22" /><text class="label" x="328" y="537">Back</text>
+
+  <g id="legend">
+    <rect x="1285" y="1120" width="430" height="95" rx="12" fill="#ffffff" stroke="#cbd5e1" />
+    <text class="legend-title" x="1305" y="1147">Legend</text>
+    <rect x="1305" y="1163" width="22" height="14" rx="4" fill="#e0f2fe" stroke="#334155" />
+    <text class="legend-text" x="1338" y="1175">Purchase/payment page</text>
+    <rect x="1495" y="1163" width="22" height="14" rx="4" fill="#fef3c7" stroke="#334155" />
+    <text class="legend-text" x="1528" y="1175">Verification page</text>
+    <rect x="1305" y="1190" width="22" height="14" rx="4" fill="#dcfce7" stroke="#334155" />
+    <text class="legend-text" x="1338" y="1202">Auth/registration page</text>
+    <rect x="1495" y="1190" width="22" height="14" rx="4" fill="#ede9fe" stroke="#334155" />
+    <text class="legend-text" x="1528" y="1202">Profile/account page</text>
+  </g>
+</svg>
