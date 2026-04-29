@@ -1,5 +1,7 @@
 # Ticketing UI + Backend Design Monorepo
 
+Ticketing system frontend, backend, and admin.
+
 This repository is organized for end-to-end product delivery from provided design inputs:
 
 Primary product context: customer-facing web ticket sales (browse events, select seats/tickets, checkout).
