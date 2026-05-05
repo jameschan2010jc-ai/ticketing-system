@@ -1,4 +1,9 @@
+import path from "node:path";
 import mysql, { type Pool } from "mysql2/promise";
+import dotenv from "dotenv";
+
+dotenv.config();
+dotenv.config({ path: path.resolve(process.cwd(), "../..", ".env") });
 
 export interface MysqlConfig {
   host: string;

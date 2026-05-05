@@ -142,13 +142,16 @@ Continue and normalize existing customer routes under `/api/v1`:
 Add `/api/v1/admin/...` namespace:
 
 - Park config
+- `GET/POST /admin/parks`
+- `PATCH/DELETE /admin/parks/{parkId}`
 - `GET/PUT /admin/park/profile`
 - `GET/PUT /admin/park/schedule`
 - `GET/PUT /admin/park/booking-window`
 - `GET/PUT /admin/park/payment-methods`
 
 - Ticket catalog/config
-- `GET/POST/PUT /admin/ticket-types`
+- `GET/POST/PUT/DELETE /admin/ticket-types`
+- `PATCH /admin/ticket-types/{ticketTypeId}/status`
 - `GET/PUT /admin/ticket-pricing-rules`
 - `GET/PUT /admin/ticket-verification-rules`
 - `GET/PUT /admin/ticket-sales-limits`
@@ -161,6 +164,11 @@ Add `/api/v1/admin/...` namespace:
 - `GET /admin/users`
 - `GET /admin/users/{userId}`
 - `PATCH /admin/users/{userId}/status`
+
+Implemented admin list views must expose operations-friendly columns:
+
+- Orders: order number, user name, payment status, ticket type, ticket price, purchase date, admission date, admission time, verification data, QR code.
+- Users: user name, registration type, registration date, last password change time, order count, total amount spent, total ticket count, unused ticket count.
 
 - Analytics
 - `GET /admin/analytics/overview`

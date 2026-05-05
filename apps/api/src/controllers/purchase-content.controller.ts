@@ -5,14 +5,15 @@ import {
   getPurchaseContentOptions
 } from "../services/purchase-content.service";
 
-export function getPurchaseOptions(_req: Request, res: Response) {
-  res.json(getPurchaseContentOptions());
+export async function getPurchaseOptions(req: Request, res: Response) {
+  res.json(await getPurchaseContentOptions(req.header("x-park-id") ?? "demo-park"));
 }
 
-export function confirmPurchase(req: Request, res: Response) {
+export async function confirmPurchase(req: Request, res: Response) {
   try {
-    const result = confirmPurchaseContent(
-      req.body as PurchaseContentConfirmRequest
+    const result = await confirmPurchaseContent(
+      req.body as PurchaseContentConfirmRequest,
+      req.header("x-park-id") ?? "demo-park"
     );
 
     res.json(result);
@@ -31,6 +32,14 @@ export function confirmPurchase(req: Request, res: Response) {
       res.status(400).json({
         code: "INVALID_QUANTITY",
         message: "Max 1 ticket per order is allowed."
+      });
+      return;
+    }
+
+    if (message === "VISIT_SLOT_NOT_AVAILABLE") {
+      res.status(409).json({
+        code: "VISIT_SLOT_NOT_AVAILABLE",
+        message: "Selected visit date or entry time is not available."
       });
       return;
     }

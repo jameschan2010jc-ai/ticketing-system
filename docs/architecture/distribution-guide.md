@@ -304,6 +304,20 @@ Available backend endpoints:
 - `GET /api/v1/purchase-method/guest-notice`
 - `GET /api/v1/purchase-content/options`
 - `POST /api/v1/purchase-content/confirm`
+- `POST /api/v1/orders`
+- `GET /api/v1/orders/my`
+- `GET /api/v1/tickets/my`
+- `POST /api/v1/orders/{orderId}/payments`
+- `GET/POST /api/v1/admin/parks`
+- `PATCH /api/v1/admin/parks/{parkId}/status`
+- `DELETE /api/v1/admin/parks/{parkId}`
+- `GET/PUT /api/v1/admin/park/profile`
+- `GET/POST /api/v1/admin/ticket-types`
+- `PUT /api/v1/admin/ticket-types/{ticketTypeId}`
+- `PATCH /api/v1/admin/ticket-types/{ticketTypeId}/status`
+- `DELETE /api/v1/admin/ticket-types/{ticketTypeId}`
+- `GET /api/v1/admin/orders`
+- `GET /api/v1/admin/users`
 
 Available frontend flow:
 
@@ -322,3 +336,7 @@ Available admin console:
 - Login shell
 - Park selector that represents `X-Park-Id`
 - Overview, park config, ticket catalog, order operations, user operations, analytics, and audit views
+- Park add, delete, activate, and deactivate operations
+- Ticket type add, delete, activate, and deactivate operations
+- Order operations table with order number, user name, payment status, ticket type, ticket price, purchase date, admission date/time, verification data, and QR code
+- User operations table with registration type/date, last password change time, order count, total spend, total ticket count, and unused ticket count

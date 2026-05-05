@@ -325,6 +325,9 @@ Admin park selection:
 | Method | Path | Permission | Purpose |
 | --- | --- | --- | --- |
 | `GET` | `/api/v1/admin/parks` | `parks:read` | List parks available to admin |
+| `POST` | `/api/v1/admin/parks` | `parks:write` | Create a park profile |
+| `PATCH` | `/api/v1/admin/parks/{parkId}/status` | `parks:write` | Activate or deactivate a park |
+| `DELETE` | `/api/v1/admin/parks/{parkId}` | `parks:write` | Delete a park profile and its ticket catalog |
 | `GET` | `/api/v1/admin/park/profile` | `park_profile:read` | Read selected park profile |
 | `PUT` | `/api/v1/admin/park/profile` | `park_profile:write` | Update intro, images, open date range |
 | `GET` | `/api/v1/admin/park/schedule` | `park_schedule:read` | List schedule/blackout dates |
@@ -342,6 +345,8 @@ Admin park selection:
 | `POST` | `/api/v1/admin/ticket-types` | `ticket_catalog:write` | Create ticket type |
 | `GET` | `/api/v1/admin/ticket-types/{ticketTypeId}` | `ticket_catalog:read` | Read ticket type detail |
 | `PUT` | `/api/v1/admin/ticket-types/{ticketTypeId}` | `ticket_catalog:write` | Update ticket name, description, status, validity |
+| `PATCH` | `/api/v1/admin/ticket-types/{ticketTypeId}/status` | `ticket_catalog:write` | Activate or deactivate a ticket type |
+| `DELETE` | `/api/v1/admin/ticket-types/{ticketTypeId}` | `ticket_catalog:write` | Delete a ticket type |
 | `GET` | `/api/v1/admin/ticket-types/{ticketTypeId}/pricing` | `ticket_catalog:read` | Read pricing rules |
 | `PUT` | `/api/v1/admin/ticket-types/{ticketTypeId}/pricing` | `ticket_catalog:write` | Update price and sales date window |
 | `GET` | `/api/v1/admin/ticket-types/{ticketTypeId}/verification-rules` | `ticket_catalog:read` | Read verification settings |
@@ -374,6 +379,8 @@ Sales-limit rules:
 Operations filters:
 
 - Orders: `status`, `orderNo`, `userKeyword`, `visitDate`, `createdFrom`, `createdTo`, `paymentMethod`.
+- Admin order list columns: order number, user name, payment status, ticket type, ticket price, purchase date, admission date, admission time, verification data, QR code.
+- Admin user list columns: user name, registration type, registration date, last password change time, order count, total amount spent, total ticket count, unused ticket count.
 - Tickets: `status`, `ticketNo`, `orderNo`, `ticketTypeId`, `visitDate`.
 - Users: `status`, `phone`, `email`, `createdFrom`, `createdTo`.
 - Verifications: `resultStatus`, `ticketTypeId`, `createdFrom`, `createdTo`, `reasonCode`.

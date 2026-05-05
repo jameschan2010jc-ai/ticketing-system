@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
 import { getHomeContent } from "../services/home-content.service";
 
-export function getHome(_req: Request, res: Response) {
-  res.json(getHomeContent());
+export async function getHome(req: Request, res: Response) {
+  res.json(await getHomeContent(req.header("x-park-id") ?? "demo-park"));
 }
